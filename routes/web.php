@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +17,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+Route::group(['prefix'=> 'user'], function(){
+Route::get('/login', [LoginController::class,'index'])->name('user.login');
+Route::get('/register',[RegisterController::class,'index'])->name('user.register');
+Route::post('/register',[RegisterController::class,'store']);
 });
