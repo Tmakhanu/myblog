@@ -33,5 +33,7 @@
             <div class="col-md-4">
                 &nbsp;
         </div>
+    </div>
+        <input type="submit" class="btn btn-primary btn-md" value="Login">
     
 @endsection

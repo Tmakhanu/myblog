@@ -19,7 +19,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::group(['prefix'=> 'user'], function(){
-Route::get('/login', [LoginController::class,'index'])->name('user.login');
-Route::get('/register',[RegisterController::class,'index'])->name('user.register');
-Route::post('/register',[RegisterController::class,'store']);
+Route::get('/login', [LoginController::class,'showLoginForm'])->name('user.login');
+Route::post('/login',[LoginController::class,'login ']);
+Route::get('/register',[RegisterController::class,'showRegisterForm'])->name('user.register');
+Route::post('/register',[RegisterController::class,'register']);
+
 });
