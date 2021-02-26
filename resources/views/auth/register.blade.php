@@ -13,8 +13,9 @@
                         &nbsp;
                 </div>
                  <div class="col-md-4">
-                    <label for="username" class="form-label">User Name</label></div>
+                    <label for="username" class="form-label">User Name</label>
                 <input type="text" class="form-control" name="username" placeholder="John Doe" required>
+            </div>
                 <div class="col-md-4">
                     &nbsp;
                 </div>
@@ -24,8 +25,9 @@
                     &nbsp;
             </div>
              <div class="col-md-4">
-                <label for="email" class="form-label">Email</label></div>
+                <label for="email" class="form-label">Email</label>
             <input type="email" class="form-control" name="email" placeholder="johndoe@gmail.com" required>
+        </div>
             <div class="col-md-4">
                 &nbsp;
             </div>
@@ -34,8 +36,14 @@
                 &nbsp;
         </div>
          <div class="col-md-4">
-            <label for="password" class="form-label">Password</label></div>
+            <label for="password" class="form-label">Password</label>
         <input type="password" class="form-control" name="password" required>
+        @error('password')
+        <span class="invalid-feedback" role="alert">
+            <strong class="text-danger">{{ $message }}</strong>
+            </span>
+    @enderror
+</div>
         <div class="col-md-4">
             &nbsp;
         </div>
@@ -44,8 +52,14 @@
             &nbsp;
     </div>
      <div class="col-md-4">
-        <label for="_confirm" class="form-label">Retype password</label></div>
-    <input type="password" name="_confirm" class="form-control"  required>
+        <label for="_confirm" class="form-label">Retype password</label>
+    <input type="password" name="password_confirmation" class="form-control"  required>
+    @error('password')
+        <span class="invalid-feedback" role="alert">
+            <strong class="text-danger">{{ $message }}</strong>
+            </span>
+    @enderror
+</div>
     <div class="col-md-4">
         &nbsp;
     </div>

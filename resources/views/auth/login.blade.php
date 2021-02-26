@@ -13,8 +13,9 @@
                         &nbsp;
                 </div>
                  <div class="col-md-4">
-                    <label for="username" class="form-label">User Name</label></div>
+                    <label for="username" class="form-label">User Name</label>
                 <input type="text" class="form-control" name="username" placeholder="John Doe" required>
+            </div>
                 <div class="col-md-4">
                     &nbsp;
                 </div>
@@ -24,8 +25,9 @@
                     &nbsp;
             </div>
             <div class="col-md-4">
-                <label for="password" class="form-label">Password</label></div>
+                <label for="password" class="form-label">Password</label>
             <input type="password" class="form-control" name="password" required>
+        </div>
             <div class="col-md-4">
                 &nbsp;
             </div>
@@ -34,6 +36,10 @@
                 &nbsp;
         </div>
     </div>
+    <div class="form-group row">
+        <div class="col-md-4">
         <input type="submit" class="btn btn-primary btn-md" value="Login">
-    
+    </div>
+</div>
+
 @endsection

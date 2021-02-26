@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 
 class LoginController extends Controller
 {
-    public function index(){
+    public function showLoginForm(){
         return view('auth.login');
     }
 }
